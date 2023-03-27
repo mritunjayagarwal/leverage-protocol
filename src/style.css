@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.container-fluid{
+    max-width: 85%;
+    margin: 0 auto;
+}
+
+section{
+    padding: 100px 0;
+}
+
+main{
+    background: #000;
+}
+
+.navbar {
+    transition: 0.5s;
+    z-index: 99;
+}
+
+.navbar li a {
+    color: #fff;
+    transition: 0.3s;
+}
+
+.navbar li a:hover {
+    color: pink;
+    text-decoration: none;
+}
+
+.navbar li a:active,
+.navbar li a:visited {
+    text-decoration: none;
+}
+
+.navbar-brand {
+    color: #fff !important;
+}
+
+.navbar-brand:hover {
+    color: #fff;
+}
+
+.nav-btn {
+    font-size: 15px;
+    margin-top: -8px;
+    font-weight: 600;
+    color: #000;
+}
+
+/* Hero Section */
+
+.hero-section {
+    background: #000;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-tag {
+    font-weight: 600;
+}
+
+.hero-main {
+    font-weight: 700 !important;
+    font-size: 5em;
+}
+
+.hero-para {
+    width: 60%;
+}
+
+.hero-btn {
+    transition: 0.2s ease-in;
+    color: #000;
+}
+
+.hero-link:hover {
+    text-decoration: none;
+}
+
+.hero-btn,
+.btn-grad {
+    width: 200px;
+    padding: 20px 0;
+    margin: 10px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    font-weight: 700;
+    border: 1px solid pink;
+}
+
+.hero-btn:hover {
+    margin-top: 2px;
+}
+
+.btn-grad {
+    background-image: linear-gradient(to right, #1A2980 0%, #26D0CE  51%, #1A2980  100%);
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: #fff;
+}
+
+.btn-grad:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Ecosystem Section */
+
+.ecosystem-item{
+    height: 450px;
+    width: 90%;
+    background: #010623;
+    padding: 1em;
+    border: 7px solid #26D0CE;
+    border-radius: 40px;
+}
+
+.ecosystem-times{
+    font-size: 7em;
+}
+
+.ecosystem-title{
+    font-size: 3.5em;
+    margin-top: -30px;
+}
+
+.ecosystem-desc{
+    font-size: 2em;
+}
+
+/* Socials Section */
+
+.socials-wrapper{
+    border-bottom: 5px solid #26D0CE;
+    width: 80%;
+    margin:  0 auto;
+}
