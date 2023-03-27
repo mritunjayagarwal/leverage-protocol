@@ -84,9 +84,11 @@ const Home = () => {
                         <div className='row'>
                             {features.map((feature) => {
                                 return <div key={feature.id} className='col-lg-6 mt-4'>
-                                    <img src={feature.icon} style={{ width: "50px", height: "auto" }} alt={feature.title} />
-                                    <h1>{feature.title}</h1>
-                                    <p>{feature.desc}</p>
+                                    <div className='feature-item'>
+                                        <img src={feature.icon} style={{ width: "50px", height: "auto" }} alt={feature.title} />
+                                        <h1 class="feature-title">{feature.title}</h1>
+                                        <p class="feature-desc">{feature.desc}</p>
+                                    </div>
                                 </div>
                             })}
                         </div>
@@ -133,16 +135,16 @@ const Home = () => {
                 <section>
                     <div className='container'>
                         <div>
-                            <h1 className = "text-center">Join the Community</h1>
-                            <p className = "text-center">The Leverage Protocol is a community-driven project, and we invite you to join us in building a
+                            <h1 className="text-center">Join the Community</h1>
+                            <p className="text-center">The Leverage Protocol is a community-driven project, and we invite you to join us in building a
                                 more equitable financial system</p>
                         </div>
-                        <div className = "mt-5">
+                        <div className="mt-5">
                             <div className='d-flex justify-content-around pb-5 socials-wrapper'>
-                                { socials.map((social) => {
-                                    return <div key = {social.id}>
+                                {socials.map((social) => {
+                                    return <div key={social.id}>
                                         <Link to="/swap">
-                                        <img src={social.icon} alt="" style = {{ width: "50px", height: 'auto', "border-radius": '50%'}} />
+                                            <img src={social.icon} alt="" style={{ width: "50px", height: 'auto', "border-radius": '50%' }} />
                                         </Link>
                                     </div>
                                 })}

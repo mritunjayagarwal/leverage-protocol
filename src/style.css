@@ -2,13 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     color: #fff;
     font-family: 'Montserrat', sans-serif;
     scroll-behavior: smooth;
@@ -16,16 +16,16 @@ body{
     overflow-y: auto;
 }
 
-.container-fluid{
+.container-fluid {
     max-width: 85%;
     margin: 0 auto;
 }
 
-section{
+section {
     padding: 100px 0;
 }
 
-main{
+main {
     background: #000;
 }
 
@@ -67,7 +67,8 @@ main{
 /* Hero Section */
 
 .hero-section {
-    background: #000;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -115,7 +116,7 @@ main{
 }
 
 .btn-grad {
-    background-image: linear-gradient(to right, #1A2980 0%, #26D0CE  51%, #1A2980  100%);
+    background-image: linear-gradient(to right, #1A2980 0%, #26D0CE 51%, #1A2980 100%);
     transition: 0.5s;
     background-size: 200% auto;
     color: #fff;
@@ -128,9 +129,26 @@ main{
     text-decoration: none;
 }
 
+/* features section */
+
+.feature-item{
+    height: 100%;
+    padding: 1em;
+}
+
+.feature-title{
+    font-size: 30px;
+    margin-top: 20px;
+    font-weight: 700;
+}
+
+.feature-desc{
+    font-size: 20px;
+}
+
 /* Ecosystem Section */
 
-.ecosystem-item{
+.ecosystem-item {
     height: 450px;
     width: 90%;
     background: #010623;
@@ -139,23 +157,23 @@ main{
     border-radius: 40px;
 }
 
-.ecosystem-times{
+.ecosystem-times {
     font-size: 7em;
 }
 
-.ecosystem-title{
+.ecosystem-title {
     font-size: 3.5em;
     margin-top: -30px;
 }
 
-.ecosystem-desc{
+.ecosystem-desc {
     font-size: 2em;
 }
 
 /* Socials Section */
 
-.socials-wrapper{
+.socials-wrapper {
     border-bottom: 5px solid #26D0CE;
     width: 80%;
-    margin:  0 auto;
+    margin: 0 auto;
 }
