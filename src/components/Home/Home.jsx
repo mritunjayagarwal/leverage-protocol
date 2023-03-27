@@ -50,7 +50,7 @@ const Home = () => {
                 </nav>
 
                 <section>
-                    <div class="text-center">
+                    <div class="text-center hero-sec">
                         <h1 class="hero-main" data-aos="fade" data-aos-duration="1000" data-aos-delay="400">Leverage Your Potential</h1>
                         <p class="hero-para mx-auto">a decentralized exchange platform that enables users to trade leading
                             cryptocurrencies with high leverage directly from their wallets.
