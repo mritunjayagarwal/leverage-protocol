@@ -2,6 +2,7 @@
   text-align: center;
   background-color: #e3eef3;
   min-height: 100vh;
+  background: #000;
 }
 
 body {
@@ -61,13 +62,12 @@ body {
 /* Swap Container */
 .appBody {
   height: 100%;
-  padding-top: 80px;
+  padding-top: 200px;
 }
 
 .swapContainer {
   background-color: rgb(203, 231, 240);
-  width: 440px;
-  height: 350px;
+  width: 60%;
   margin: 0 auto;
   top: 50%;
   border-radius: 24px;
@@ -93,6 +93,7 @@ body {
 /******************************************************************************/
 /* Currency Input */
 .currencyInput {
+  width: 100%;
   background-color: rgb(217, 236, 242);
   margin: 10px !important;
   padding: 10px;
@@ -113,8 +114,9 @@ body {
 }
 
 .spinnerContainer {
-  height: 55px;
-  line-height: 55px;
+  height: 25px;
+  padding-top: 10px;
+  /* line-height: 55px; */
 }
 
 .currencyInputField {
