@@ -9,7 +9,6 @@
 }
 
 body {
-    color: #fff;
     font-family: 'Montserrat', sans-serif;
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -27,6 +26,7 @@ section {
 
 main {
     background: #000;
+    color: #fff;
 }
 
 .navbar {
@@ -75,6 +75,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #fff;
 }
 
 .hero-tag {
