@@ -10,6 +10,7 @@ import PageButton from './PageButton';
 import ConnectButton from './ConnectButton';
 import ConfigModal from './ConfigModal';
 import CurrencyField from "./CurrencyField";
+import { Link } from 'react-router-dom';
 
 import { getWethContract, getUniContract, getPrice, runSwap } from "../AlphaRouterService";
 
@@ -32,6 +33,8 @@ const Main = () => {
   const [uniContract, setUniContract] = useState(undefined);
   const [ethAmount, setEthAmount] = useState(undefined);
   const [uniAmount, setUniAmount] = useState(undefined);
+
+  const [hamToggle, setHamToggle] = useState(false);
 
 
   useEffect(() => {
@@ -95,15 +98,57 @@ const Main = () => {
 
 
   return (
-    <div className="App">
-      <div className='appNav'>
+    <div className={hamToggle ? 'App mobile-nav-active' : 'App'}>
 
-        <div className='my-2 buttonContainer buttonContainerTop'>
-          <PageButton name={"Swap"} isBold={true} />
-          <PageButton name={"Pool"} />
-          <PageButton name={"Vote"} />
-          <PageButton name={"Chart"} />
+      <i className = "fa fa-bars mobile-nav-toggle d-xl-none" onClick = {() => setHamToggle(!hamToggle)}></i>
+
+      <header id="header">
+        <div className="d-flex flex-column">
+
+          <div className="profile">
+            <img src="assets/img/profile-img.jpg" alt="" className="img-fluid rounded-circle" />
+          </div>
+
+          <nav id="navbar" className="nav-menu navbar">
+            <ul id="myMenu">
+              <li>
+                <div>
+                <Link to="#about" className="nav-link scrollto"><i className="fa fa-home"></i></Link>
+                </div>
+                <div>
+                  Home
+                </div>
+              </li>
+              <li>
+                <div>
+                <Link to="#about" className="nav-link scrollto"><i className="fa fa-exchange"></i></Link>
+                </div>
+                <div>
+                  Swap
+                </div>
+              </li>
+              <li>
+                <div>
+                <Link to="#about" className="nav-link scrollto"><i className="fa fa-chart"></i></Link>
+                </div>
+                <div>
+                  Trade
+                </div>
+              </li>
+              <li>
+                <div>
+                <Link to="#about" className="nav-link scrollto"><i className="fa fa-wallet"></i></Link>
+                </div>
+                <div>
+                  Wallet
+                </div>
+              </li>
+            </ul>
+          </nav>
         </div>
+      </header>
+
+      <div className='appNav'>
 
         <div className='rightNav'>
           <div className='connectButtonContainer'>
@@ -140,29 +185,29 @@ const Main = () => {
           </div>
 
           <div className=''>
-            <div class="row">
-              <div class="col-lg-6">
+            <div className="row">
+              <div className="col-lg-6">
                 <div className="currency-item">
-                <CurrencyField
-                  field="input"
-                  tokenName="WETH"
-                  getSwapPrice={getSwapPrice}
-                  signer={signer}
-                  balance={ethAmount}
-                />
+                  <CurrencyField
+                    field="input"
+                    tokenName="WETH"
+                    getSwapPrice={getSwapPrice}
+                    signer={signer}
+                    balance={ethAmount}
+                  />
                 </div>
               </div>
-              <div className = 'col-lg-6'>
+              <div className='col-lg-6'>
                 <div className="currency-item">
-                <CurrencyField
-                  field="output"
-                  tokenName="UNI"
-                  value={outputAmount}
-                  signer={signer}
-                  balance={uniAmount}
-                  spinner={BeatLoader}
-                  loading={loading}
-                />
+                  <CurrencyField
+                    field="output"
+                    tokenName="UNI"
+                    value={outputAmount}
+                    signer={signer}
+                    balance={uniAmount}
+                    spinner={BeatLoader}
+                    loading={loading}
+                  />
                 </div>
               </div>
             </div>
