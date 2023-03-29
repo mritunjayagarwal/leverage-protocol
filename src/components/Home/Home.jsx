@@ -1,7 +1,6 @@
 import React from 'react';
 import '../../style.css';
 import Logo from '../img/1.png';
-import Laptop from '../img/7.png';
 import { Link } from 'react-router-dom';
 import features from './features';
 import ecosystem from './ecosystem';
