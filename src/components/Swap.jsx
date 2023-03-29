@@ -1,6 +1,6 @@
 import React from 'react';
 import '../App.css';
-import Logo from './img/1.png'
+import Logo from './img/1.png';
 import { useState, useEffect } from "react";
 
 import { ethers } from 'ethers';

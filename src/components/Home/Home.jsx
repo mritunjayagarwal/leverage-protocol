@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../style.css';
+import Logo from '../img/1.png';
 import { Link } from 'react-router-dom';
 import features from './features';
 import ecosystem from './ecosystem';
@@ -12,7 +13,7 @@ const Home = () => {
                 <nav className="navbar navbar-expand-lg py-3 m-0" style={{ position: "absolute", top: 0, left: 0, right: 0 }}>
                     <div className='container container-fluid'>
                         <Link className="navbar-brand me-2" to="#">
-                            <img src="./img/logo.png" style={{ width: "30px", height: "auto", "margin-top": "-10px" }} alt="" /> Leverage Protocol
+                            <img src={Logo} style={{ width: "30px", height: "auto", "margin-top": "-10px" }} alt="" /> Leverage Protocol
                         </Link>
 
                         <button className="navbar-toggler text-white" type="button" data-toggle="collapse" data-target="#navbarText"

@@ -12,7 +12,7 @@ const ConnectButton = props => {
                     <PageButton name={displayAddress} />
                 </div>
             ) : (
-                <div className="btn my-2 px-3 py-2 btn-grad" onClick={async () => getSigner(provider)}>
+                <div className="btn my-2 px-3 py-2 btn-grad" style = {{"border": "unset"}} onClick={async () => getSigner(provider)}>
                     Connect Wallet
                 </div>
             )}

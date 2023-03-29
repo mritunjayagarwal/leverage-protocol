@@ -25,7 +25,10 @@ section {
 }
 
 main {
-    background: #000;
+    background: url(./components/img/main-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     color: #fff;
 }
 
@@ -67,9 +70,9 @@ main {
 /* Hero Section */
 
 .hero-section {
-    background: rgb(2, 0, 36);
-    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    background: url(./components/img/hero-bg.png);
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     height: 100vh;
     display: flex;
