@@ -7,7 +7,7 @@ const CurrencyField = props => {
 
     return (
         <div className="currency-container">
-            <p className = "text-left pl-3">{ props.tokenName === "WETH" ? "I have": "I Want"}</p>
+            <p className = "text-left pl-3">{ props.tokenName === "ETH" ? "I have": "I Want"}</p>
             <div className="row currencyInput">
                 <div className="col-md-6 numberContainer">
                     {props.loading ? (

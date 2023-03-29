@@ -194,7 +194,7 @@ const Main = () => {
                 <div className="currency-item">
                   <CurrencyField
                     field="input"
-                    tokenName="WETH"
+                    tokenName="ETH"
                     getSwapPrice={getSwapPrice}
                     signer={signer}
                     balance={ethAmount}
@@ -221,7 +221,7 @@ const Main = () => {
           <div className='ratioContainer pl-4'>
             {ratio && (
               <>
-                {`1 UNI = ${ratio} WETH`}
+                {`1 UNI = ${ratio} ETH`}
               </>
             )}
           </div>
