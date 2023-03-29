@@ -25,7 +25,7 @@ section {
 }
 
 main {
-    background: url(./components/img/main-bg.png);
+    background: url(./components/img/main-bg.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

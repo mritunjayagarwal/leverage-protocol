@@ -137,7 +137,7 @@ const Home = () => {
                 <section id = "community">
                     <div className='container'>
                         <div>
-                            <h1 className="text-center">Join the Community</h1>
+                            <h1 className="text-center hero-tag">Join the Community</h1>
                             <p className="text-center hero-para-sec">The Leverage Protocol is a community-driven project, and we invite you to join us in building a
                                 more equitable financial system</p>
                         </div>
@@ -146,7 +146,7 @@ const Home = () => {
                                 {socials.map((social) => {
                                     return <div key={social.id}>
                                         <Link to="/swap">
-                                            <img src={social.icon} alt="" style={{ width: "50px", height: 'auto', "border-radius": '50%' }} />
+                                            <img src={require(`../img/${social.icon}`)} alt="" style={{ width: "100px", height: 'auto', "border-radius": '50%' }} />
                                         </Link>
                                     </div>
                                 })}
