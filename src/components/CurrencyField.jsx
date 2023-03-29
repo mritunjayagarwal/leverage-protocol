@@ -6,7 +6,8 @@ const CurrencyField = props => {
     }
 
     return (
-        <>
+        <div className="currency-container">
+            <p className = "text-left pl-3">{ props.tokenName === "WETH" ? "I have": "I Want"}</p>
             <div className="row currencyInput">
                 <div className="col-md-6 numberContainer">
                     {props.loading ? (
@@ -27,12 +28,12 @@ const CurrencyField = props => {
                 </div>
             </div>
             <div>
-                <div className="border d-flex justify-content-between w-100 px-3">
+                <div className="d-flex justify-content-between w-100 px-3">
                     <div className="pull-left">Balance: </div>
                     <div className="pull-right">{props.balance?.toFixed(3)}</div>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 

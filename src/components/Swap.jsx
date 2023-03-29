@@ -1,5 +1,6 @@
 import React from 'react';
 import '../App.css';
+import Logo from './img/1.png'
 import { useState, useEffect } from "react";
 
 import { ethers } from 'ethers';
@@ -100,28 +101,28 @@ const Main = () => {
   return (
     <div className={hamToggle ? 'App mobile-nav-active' : 'App'}>
 
-      <i className = "fa fa-bars mobile-nav-toggle d-xl-none" onClick = {() => setHamToggle(!hamToggle)}></i>
+      <i className="fa fa-bars mobile-nav-toggle d-xl-none" onClick={() => setHamToggle(!hamToggle)}></i>
 
       <header id="header">
         <div className="d-flex flex-column">
 
-          <div className="profile">
-            <img src="assets/img/profile-img.jpg" alt="" className="img-fluid rounded-circle" />
+          <div className="pt-2">
+            <Link to="/"><img src={Logo} alt="" className="img-fluid" /></Link>
           </div>
 
           <nav id="navbar" className="nav-menu navbar">
             <ul id="myMenu">
               <li>
                 <div>
-                <Link to="#about" className="nav-link scrollto"><i className="fa fa-home"></i></Link>
+                  <Link to="#about" className="nav-link scrollto active"><i className="pl-2 fa fa-home"></i></Link>
                 </div>
                 <div>
                   Home
                 </div>
               </li>
-              <li>
+              <li className='nav-item-active'>
                 <div>
-                <Link to="#about" className="nav-link scrollto"><i className="fa fa-exchange"></i></Link>
+                  <Link to="#about" className="nav-link scrollto"><i className="pl-2 fa fa-exchange"></i></Link>
                 </div>
                 <div>
                   Swap
@@ -129,15 +130,15 @@ const Main = () => {
               </li>
               <li>
                 <div>
-                <Link to="#about" className="nav-link scrollto"><i className="fa fa-chart"></i></Link>
+                  <Link to="#about" className="nav-link scrollto"><i className="pl-2 fa fa-line-chart"></i></Link>
                 </div>
                 <div>
                   Trade
                 </div>
               </li>
               <li>
-                <div>
-                <Link to="#about" className="nav-link scrollto"><i className="fa fa-wallet"></i></Link>
+                <div class="pl-2">
+                  <Link to="#about" className="nav-link scrollto"><i className="pl-2 fa fa-dollar"></i></Link>
                 </div>
                 <div>
                   Wallet
@@ -169,10 +170,13 @@ const Main = () => {
       <div className='appBody'>
         <div className='swapContainer'>
           <div className='swapHeader'>
-            <span className='swapText'>Swap</span>
-            <span className='gearContainer' onClick={() => setShowModal(true)}>
-              <GearFill />
-            </span>
+            <div>
+              <span className='swapText text-center'>Simple DEX</span>
+              <span className='gearContainer' onClick={() => setShowModal(true)}>
+                <GearFill />
+              </span>
+            </div>
+            <p className='swapDesc text-center'>Swap tokens using ethereum Dex</p>
             {showModal && (
               <ConfigModal
                 onClose={() => setShowModal(false)}
@@ -186,7 +190,7 @@ const Main = () => {
 
           <div className=''>
             <div className="row">
-              <div className="col-lg-6">
+              <div className="col-lg-6 has-icon">
                 <div className="currency-item">
                   <CurrencyField
                     field="input"
@@ -195,6 +199,7 @@ const Main = () => {
                     signer={signer}
                     balance={ethAmount}
                   />
+                  <i className = "fa fa-exchange"></i>
                 </div>
               </div>
               <div className='col-lg-6'>
@@ -224,14 +229,14 @@ const Main = () => {
           <div className='swapButtonContainer'>
             {isConnected() && inputAmount ? (
               <div
-                className='swapButton'
+                className='w-100 btn-grad'
                 onClick={() => runSwap(transaction, signer)}
               >
                 Swap
               </div>
             ) : (
               <div
-                className='swapButton'
+                className='w-100 btn-grad'
                 onClick={() => getSigner(provider)}
               >
                 Connect Wallet
