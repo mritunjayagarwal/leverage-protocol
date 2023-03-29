@@ -4,21 +4,21 @@ const ecosystem = [
         times: '10X',
         title: 'Faster',
         desc: 'Lightning-fast trading speed',
-        image: 'someting.png'
+        image: '6.png'
     },
     {
         id: 2,
         times: '20X',
         title: 'Leverage',
         desc: 'Unleash your potential',
-        image: 'someting.png'
+        image: '6.png'
     },
     {
         id: 3,
         times: '30%',
         title: 'Cheaper',
         desc: 'Experience low fees',
-        image: 'someting.png'
+        image: '6.png'
     }
 ]
 

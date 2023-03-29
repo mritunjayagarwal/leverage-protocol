@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../style.css';
 import Logo from '../img/1.png';
+import Laptop from '../img/7.png';
 import { Link } from 'react-router-dom';
 import features from './features';
 import ecosystem from './ecosystem';
@@ -11,9 +12,9 @@ const Home = () => {
         <>
             <header className="hero-section">
                 <nav className="navbar navbar-expand-lg py-3 m-0" style={{ position: "absolute", top: 0, left: 0, right: 0 }}>
-                    <div className='container container-fluid'>
+                    <div className='container-fluid'>
                         <Link className="navbar-brand me-2" to="#">
-                            <img src={Logo} style={{ width: "30px", height: "auto", "margin-top": "-10px" }} alt="" /> Leverage Protocol
+                            <img src={Logo} style={{ width: "80px", height: "auto", "margin-top": "-10px" }} alt="" /> Leverage Protocol
                         </Link>
 
                         <button className="navbar-toggler text-white" type="button" data-toggle="collapse" data-target="#navbarText"
@@ -34,7 +35,7 @@ const Home = () => {
                                     </a>
                                 </li>
                                 <li className="nav-item">
-                                    <a href="#privacy" className="px-3 pt-2 btn-link">
+                                    <a href="#community" className="px-3 pt-2 btn-link">
                                         Community
                                     </a>
                                 </li>
@@ -59,7 +60,7 @@ const Home = () => {
 
                         <div class="d-flex justify-content-center">
                             <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
-                                <button class="btn-grad">Buy Now</button>
+                                <button class="btn-grad">Community</button>
                             </div>
                             <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
                                 <Link class="hero-link"
@@ -77,16 +78,16 @@ const Home = () => {
                 <section>
                     <div className='container'>
                         <div>
-                            <h1 className='hero-tag'>Take Your Trades to New
+                            <h1 className='hero-tag w-50 w-lg-100'>Take Your Trades to New
                                 Elevations</h1>
-                            <p>Leverage Protocol is a decentralized perpetual futures exchange on the blockchain that offers
+                            <p className = "hero-para-sec">Leverage Protocol is a decentralized perpetual futures exchange on the blockchain that offers
                                 deep liquidity and is readily composable for builders to integrate and customize.</p>
                         </div>
                         <div className='row'>
                             {features.map((feature) => {
                                 return <div key={feature.id} className='col-lg-6 mt-4'>
                                     <div className='feature-item'>
-                                        <img src={feature.icon} style={{ width: "50px", height: "auto" }} alt={feature.title} />
+                                        <img src={require(`../img/${feature.icon}`)} style={{ width: "50px", height: "auto" }} alt={feature.title} />
                                         <h1 class="feature-title">{feature.title}</h1>
                                         <p class="feature-desc">{feature.desc}</p>
                                     </div>
@@ -96,20 +97,21 @@ const Home = () => {
                     </div>
                 </section>
 
-                <section>
+                <section id = "ecosystem">
                     <div className='container container-fluid'>
                         <div>
                             <h1 className='hero-tag text-center'>A robust ecosystem</h1>
-                            <p className='text-center'>Leverage Protocols Perp DEX is designed to deliver not only high leverage and lower fees, but
+                            <p className='text-center hero-para-sec eco-sub'>Leverage Protocols Perp DEX is designed to deliver not only high leverage and lower fees, but
                                 also trading speeds that are up to 10x faster than other platforms.</p>
                         </div>
                         <div className='row mt-5'>
-                            {ecosystem.map((item) => {
-                                return <div className='col-lg-4 d-flex justify-content-center'>
+                            {ecosystem.map((item, index) => {
+                                return <div key = {item.id} className='col-lg-4 d-flex justify-content-center'>
                                     <div className='ecosystem-item'>
                                         <h1 className='ecosystem-times'>{item.times}</h1>
                                         <h1 className='ecosystem-title'>{item.title}</h1>
                                         <p className='ecosystem-desc'>{item.desc}</p>
+                                        <img src={require(`../img/${item.image}`)} className = {`ecosystem-image w-${index+1}`} alt="" />
                                     </div>
                                 </div>
                             })}
@@ -119,13 +121,13 @@ const Home = () => {
                 <section>
                     <div className='container container-fluid'>
                         <div className='row'>
-                            <div className='col-lg-7'>
-
+                            <div className='col-lg-7 d-flex align-items-center justify-content-center'>
+                                <img src = {require("../img/7.png")} class = "w-100" alt = "laptop" />
                             </div>
                             <div className='col-lg-5 text-center d-flex align-items-center justify-content-center'>
                                 <div>
                                     <h1 class="hero-tag">Trade on the Go</h1>
-                                    <p>Trade freely from anywhere worldwide, with no
+                                    <p class = "hero-para-sec">Trade freely from anywhere worldwide, with no
                                         geographical limitations to confide</p>
                                     <button className='btn-grad'>Launch Dapp</button>
                                 </div>
@@ -133,11 +135,11 @@ const Home = () => {
                         </div>
                     </div>
                 </section>
-                <section>
+                <section id = "community">
                     <div className='container'>
                         <div>
                             <h1 className="text-center">Join the Community</h1>
-                            <p className="text-center">The Leverage Protocol is a community-driven project, and we invite you to join us in building a
+                            <p className="text-center hero-para-sec">The Leverage Protocol is a community-driven project, and we invite you to join us in building a
                                 more equitable financial system</p>
                         </div>
                         <div className="mt-5">

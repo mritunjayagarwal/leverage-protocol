@@ -16,19 +16,19 @@ body {
 }
 
 .container-fluid {
-    max-width: 85%;
+    max-width: 90%;
     margin: 0 auto;
 }
 
 section {
-    padding: 100px 0;
+    padding: 50px 0;
 }
 
 main {
     background: url(./components/img/main-bg.png);
     background-repeat: no-repeat;
-    background-position: center;
     background-size: cover;
+    background-position: center;
     color: #fff;
 }
 
@@ -71,7 +71,6 @@ main {
 
 .hero-section {
     background: url(./components/img/hero-bg.png);
-    background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     height: 100vh;
@@ -83,6 +82,7 @@ main {
 
 .hero-tag {
     font-weight: 600;
+    font-size: 3em;
 }
 
 .hero-main {
@@ -92,6 +92,11 @@ main {
 
 .hero-para {
     width: 60%;
+    font-size: 1.5em;
+}
+
+.hero-para-sec{
+    font-size: 1.3em;
 }
 
 .hero-btn {
@@ -120,7 +125,7 @@ main {
 }
 
 .btn-grad {
-    background-image: linear-gradient(to right, #1A2980 0%, #26D0CE 51%, #1A2980 100%);
+    background-image: linear-gradient(to right, #1A2980 0%, #5CE1E6 51%, #1A2980 100%);
     transition: 0.5s;
     background-size: 200% auto;
     color: #fff;
@@ -157,28 +162,55 @@ main {
     width: 90%;
     background: #010623;
     padding: 1em;
-    border: 7px solid #26D0CE;
+    border: 9px solid #5CE1E6;
     border-radius: 40px;
     margin-top: 30px;
+    position: relative;
+}
+
+.eco-sub{
+    width: 80%;
+    margin: 0 auto;
 }
 
 .ecosystem-times {
-    font-size: 7em;
+    font-size: 5em;
+    font-weight: 500;
+    color: #5CE1E6;
 }
 
 .ecosystem-title {
-    font-size: 3.5em;
-    margin-top: -30px;
+    font-size: 3.7em;
+    font-weight: 500;
+    margin-top: -20px;
 }
 
 .ecosystem-desc {
     font-size: 2em;
+    font-weight: 600;
+}
+
+.ecosystem-image{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    z-index: 0 !important;
+}
+
+.w-1{
+    width: 30%;
+}
+.w-2{
+    width: 50%;
+}
+.w-3{
+    width: 70%;
 }
 
 /* Socials Section */
 
 .socials-wrapper {
-    border-bottom: 5px solid #26D0CE;
+    border-bottom: 5px solid #5CE1E6;
     width: 80%;
     margin: 0 auto;
 }
